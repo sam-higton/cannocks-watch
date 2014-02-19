@@ -1,0 +1,22 @@
+body {
+    min-height: 2000px;
+    font-family: serif;
+    background: #F1F2E6;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+    background: #C5C7B3;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    background: #D5D6C3;
+}
+
+.main-pane .inner {
+    padding: 10px;
+}
+
+.main-pane .stats-panel {
+    border: 1px solid #4F4E24;
+}
