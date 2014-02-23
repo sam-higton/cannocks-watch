@@ -17,3 +17,33 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/town-hall', {templateUrl: 'partials/town-hall.html', controller: 'TownHall'});
   $routeProvider.otherwise({redirectTo: '/guards-office'});
 }]);
+
+function RootCtrl ($scope) {
+
+    //init
+    $scope.notifications = [];
+
+    $scope.soldiers = [];
+    $scope.townsfolk = [];
+
+    $scope.resources = {
+        "iron" : 100,
+        "wood" : 100,
+        "stone": 100,
+        "gold" : 100
+    };
+
+    //set up generators
+    $scope.nameGenerator = new NameGenerator();
+
+    //setup soldiers
+    for(var i = 0; i < 20; i++) {
+        $scope.soldiers.push(new Soldier($scope.nameGenerator.generateName()));
+    }
+
+
+    $scope.rootMessage = "I R FROM ROOT";
+
+    console.log($scope.soldiers);
+}
+

@@ -3,18 +3,18 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-    controller('GuardsOffice', [function() {
+    controller('GuardsOffice', ['$scope', function($scope) {
 
     }])
-    .controller('Barracks', [function() {
+    .controller('Barracks', ['$scope',function($scope) {
 
     }])
-    .controller('Armory', [function() {
+    .controller('Armory', ['$scope',function($scope) {
 
     }])
-    .controller('Tavern', [function() {
+    .controller('Tavern', ['$scope',function($scope) {
 
     }])
-    .controller('TownHall', [function() {
+    .controller('TownHall', ['$scope',function($scope) {
 
     }]);
