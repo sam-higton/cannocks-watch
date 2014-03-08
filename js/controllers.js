@@ -3,8 +3,8 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('rootCtrl', ['$scope','$location','nameGenerator','app_conf',
-        function($scope,$location,nameGenerator, app_conf) {
+    .controller('rootCtrl', ['$scope','$location','EverythingFactory','app_conf',
+        function($scope,$location,EverythingFactory, app_conf) {
             $scope.notifications = [];
 
             $scope.soldiers = [];
@@ -18,7 +18,6 @@ angular.module('myApp.controllers', [])
             };
 
             //set up generators
-            console.log(nameGenerator.generateName());
 
             $scope.currentTime = {
                 gameTime: 0,
@@ -27,6 +26,9 @@ angular.module('myApp.controllers', [])
                 month: 0,
                 year: 0
             };
+
+            console.log(personFactory.makePerson());
+            console.log(personFactory.makePerson());
 
             $scope.updateTime = function () {
                 $scope.currentTime.gameTime += app_conf.time.hoursPerTick;

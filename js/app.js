@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
-  'myApp.controllers'
+  'myApp.controllers',
+  'myApp.models'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/people', {templateUrl: 'partials/people.html', controller: 'people'});
