@@ -3,8 +3,8 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('rootCtrl', ['$scope','$location','app_conf',
-        function($scope,$location,app_conf) {
+    .controller('rootCtrl', ['$scope','$location','nameGenerator','app_conf',
+        function($scope,$location,nameGenerator, app_conf) {
             $scope.notifications = [];
 
             $scope.soldiers = [];
@@ -18,13 +18,7 @@ angular.module('myApp.controllers', [])
             };
 
             //set up generators
-            $scope.nameGenerator = new NameGenerator();
-
-            //setup soldiers
-            for(var i = 0; i < 20; i++) {
-                $scope.soldiers.push(new Soldier($scope.nameGenerator.generateName()));
-            }
-
+            console.log(nameGenerator.generateName());
 
             $scope.currentTime = {
                 gameTime: 0,
