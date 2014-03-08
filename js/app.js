@@ -11,11 +11,9 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/guards-office', {templateUrl: 'partials/guards-office.html', controller: 'GuardsOffice'});
-  $routeProvider.when('/barracks', {templateUrl: 'partials/barracks.html', controller: 'Barracks'});
-  $routeProvider.when('/armory', {templateUrl: 'partials/armory.html', controller: 'Armory'});
-  $routeProvider.when('/tavern', {templateUrl: 'partials/tavern.html', controller: 'Tavern'});
-  $routeProvider.when('/town-hall', {templateUrl: 'partials/town-hall.html', controller: 'TownHall'});
-  $routeProvider.otherwise({redirectTo: '/guards-office'});
+  $routeProvider.when('/people', {templateUrl: 'partials/people.html', controller: 'people'});
+  $routeProvider.when('/town-planning', {templateUrl: 'partials/town-planning.html', controller: 'townPlanning'});
+  $routeProvider.when('/resources', {templateUrl: 'partials/resources.html', controller: 'resources'});
+  $routeProvider.otherwise({redirectTo: '/people'});
 }]);
 

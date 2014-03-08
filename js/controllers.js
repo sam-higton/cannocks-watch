@@ -32,7 +32,7 @@ angular.module('myApp.controllers', [])
            //set nav active link
             $scope.setActiveNav = function (route) {
                 for(var i in $scope.nav) {
-                    if($scope.nav[i] == route) {
+                    if($scope.nav[i].route == route) {
                         $scope.nav[i].isActive = true;
                     } else {
                         $scope.nav[i].isActive = false;
@@ -48,18 +48,12 @@ angular.module('myApp.controllers', [])
 
 
     }])
-    .controller('GuardsOffice', ['$scope', function($scope) {
+    .controller('people', ['$scope', function($scope) {
 
     }])
-    .controller('Barracks', ['$scope',function($scope) {
+    .controller('townPlanning', ['$scope',function($scope) {
 
     }])
-    .controller('Armory', ['$scope',function($scope) {
-
-    }])
-    .controller('Tavern', ['$scope',function($scope) {
-
-    }])
-    .controller('TownHall', ['$scope',function($scope) {
+    .controller('resources', ['$scope',function($scope) {
 
     }]);

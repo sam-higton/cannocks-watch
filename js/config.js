@@ -5,7 +5,7 @@ angular.module('myApp.config', [])
         nav: [
             {
                 name: 'People',
-                route: '/Armory'
+                route: '/people'
             },
             {
                 name: 'Town Planning',
