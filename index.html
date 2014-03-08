@@ -45,12 +45,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#/guards-office">Guard's Office</a></li>
-                <li><a href="#/barracks">Barracks</a></li>
-                <li><a href="#/armory">Armory</a></li>
-                <li><a href="#/tavern">Tavern</a></li>
-                <li><a href="#/town-hall">Town Hall</a></li>
-
+                <li ng-repeat="navItem in nav" ng-class="{active: navItem.isActive}">
+                    <a href="#{{navItem.route}}">{{navItem.name}}</a>
+                </li>
             </ul>
 
         </div><!--/.nav-collapse -->
