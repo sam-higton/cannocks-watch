@@ -15,5 +15,24 @@ angular.module('myApp.config', [])
                 name: 'resources',
                 route: '/resources'
             }
-        ]
+        ],
+        time: {
+            hoursPerTick: 2,
+            tickRate: 5000,
+            monthNames: [
+                'Morning Star',
+                'Sun\'s Dawn',
+                'First Seed',
+                'Rain\'s End',
+                'Second Seed',
+                'Mid Year',
+                'Sun\'s Height',
+                'Last Seed',
+                'Heartfire',
+                'Frostfall',
+                'Sun\'s Dusk',
+                'Evening Star'
+            ]
+        }
+
     });
